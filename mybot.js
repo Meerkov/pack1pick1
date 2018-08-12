@@ -100,6 +100,53 @@ client.on("message", (message) => {
                 });
             });
         });
+        var booster = [];
+        request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+            booster.push(body.name);
+            request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                booster.push(body.name);
+                request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                    booster.push(body.name);
+                    request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                        booster.push(body.name);
+                        request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                            booster.push(body.name);
+                            request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                booster.push(body.name);
+                                request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                    booster.push(body.name);
+                                    request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                        booster.push(body.name);
+                                        request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                            booster.push(body.name);
+                                            request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                booster.push(body.name);
+                                                request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                    booster.push(body.name);
+                                                    request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                        booster.push(body.name);
+                                                        request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                            booster.push(body.name);
+                                                            request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                                booster.push(body.name);
+                                                                request('https://api.scryfall.com/cards/random', {json: true}, function (error, response, body) {
+                                                                    booster.push(body.name);
+                                                                    message.channel.send(new Discord.RichEmbed().setDescription(booster).setTitle("15 random cards from the history of Magic!").setURL(createScryfallLink(booster, "name")));
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
     }
     else if (message.content.startsWith("!p1p1 m19")) {
         //Create the booster for this set
